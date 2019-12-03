@@ -18,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'dinoipsum',
+      title: 'CWP',
       template: './src/index.html',
       inject: 'body'
     })

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Creative Writing </title>
+</head>
+<body>
+  <form id="form">
+    <h5> Type of prompt </h5>
+    <div class="radio">
+      <label>
+        <input type=radio name="promptChoice" value="photo"> Photo
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type=radio name="promptChoice" value="gif"> Gif
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type=radio name="promptChoice" value="anything"> Anything
+      </label>
+    </div>
+    <h5> Word Limit </h5>
+      <label for="word-limit">How many words do you want to write? Enter a number greater than 10.</label>
+      <input type="number" id="word-limit" class="form-control">
+    <h5> Timer </h5>
+    <label for="time-limit">How long (in minutes) do you want your writing session to last?</label>
+    <input type="number" id="time-limit" class="form-control">
+    <br>
+    <button type="submit" id="menuSubmit" name="button">Submit</button>
+  </form>
+
+  <div class="writing-space">
+    <img src="src" id="gif-prompt" alt="gd">
+
+  </div>
+
+</body>
+</html>
