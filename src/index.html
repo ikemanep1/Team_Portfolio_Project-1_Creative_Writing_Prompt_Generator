@@ -9,17 +9,27 @@
     <h5> Type of prompt </h5>
     <div class="radio">
       <label>
-        <input type=radio name="promptChoice" value="photo"> Photo
+        <input type=radio name="promptChoice" value="1"> Gif
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type=radio name="promptChoice" value="gif"> Gif
+        <input type=radio name="promptChoice" value="2"> Photo
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type=radio name="promptChoice" value="anything"> Anything
+        <input type=radio name="promptChoice" value="3"> Prompt
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type=radio name="promptChoice" value="4"> Word
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type=radio name="promptChoice" value="5"> Anything
       </label>
     </div>
     <h5> Word Limit </h5>
@@ -33,9 +43,14 @@
   </form>
 
   <div class="writing-space">
-    <img src="src" id="gif-prompt" alt="gd">
-
+    <img src="src" id="gif-prompt" alt="press submit to activate">
   </div>
-
+    <img src="photo" alt="" class="photo">
+  <div class="Result">
+    <p>Write about <span class="promptResult"></span></p>
+  </div>
+  <form class="writingInput" action="index.html" method="post">
+    <input type="text" name="" value="">
+  </form>
 </body>
 </html>
