@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
     const getElementsWords = function(responseWords) {
-      $("#words-prompt").append(`${responseWords[0]}, ${responseWords[1]}, ${responseWords[2]}, ${responseWords[3]}, ${responseWords[4]}, ${responseWords[5]}, ${responseWords[6]}, ${responseWords[7]}, ${responseWords[8]}, ${responseWords[9]}`);
+      $("#words-prompt").append(`${responseWords[1]}, ${responseWords[2]}, ${responseWords[3]}, ${responseWords[4]}, ${responseWords[5]}, ${responseWords[6]}, ${responseWords[7]}, ${responseWords[8]}, ${responseWords[9]}`);
       $("#words-prompt2").append(`${responseWords[10]}, ${responseWords[11]}, ${responseWords[12]}, ${responseWords[13]}, ${responseWords[14]}, ${responseWords[15]}, ${responseWords[16]}, ${responseWords[17]}, ${responseWords[18]}, ${responseWords[19]}`);
     };
 
