@@ -5,11 +5,20 @@ import Gif from "./gifs.js";
 import PictureAPI from "./pictures.js";
 import StoryPrompts from "./prompts.js";
 import Words from "./random-words.js";
+import Writer from "./writer.js";
 $(document).ready(function() {
   $('#menuSubmit').click(function(e) {
     e.preventDefault();
 
     let userChoice = $("input:radio[name=promptChoice]:checked").val();
+    let minuteTimer = parseInt($("#time-limit").val());
+    let millisecondTimer = (minuteTimer * 60000);
+    let inputtedName = $("#name").val();
+    let newWriter = new Writer (inputtedName, millisecondTimer);
+    $(".intro").hide();
+    $(".writing-space").show();
+
+
     const apiDecider = function(promptChoice) {
       if (promptChoice === "5") {
         let random = Math.floor((Math.random() * 3) + 1);
