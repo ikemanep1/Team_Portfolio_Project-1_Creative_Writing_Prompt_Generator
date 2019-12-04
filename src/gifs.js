@@ -1,7 +1,7 @@
 export default class Gif {
   async getGif() {
     try {
-      let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=LcQvnDJKQVtThD6fRxYBWV1l4cCTZbtB&q=art&rating=g&type=random`);
+      let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${process.env.API_KEY2}&q=art&rating=g&type=random`);
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
     } catch(error) {
