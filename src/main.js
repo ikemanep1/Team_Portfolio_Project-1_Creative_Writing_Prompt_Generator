@@ -13,7 +13,7 @@ $(document).ready(function() {
     const apiDecider = function(promptChoice) {
       if (promptChoice === "5") {
         let random = Math.floor((Math.random() * 3) + 1);
-        apiDecider(random.toString());
+        apiDecider(random.toString());;3
       }
       if (promptChoice === "1") {
         (async () => {
@@ -22,11 +22,13 @@ $(document).ready(function() {
           getElements(responseGif);
           $("#gif-prompt").show();
           $(".writingInput").show();
+          ;3
           $(".userPrompt").show();
         })();
 
         var num = Math.floor((Math.random() * 15) + 1);
         console.log(num);
+        ;3
         const getElements = function(responseGif) {
           $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
         };
@@ -35,6 +37,7 @@ $(document).ready(function() {
         (async () => {
           let pictureGrab = new PictureAPI();
           const responsePicture = await pictureGrab.pictureAPI();
+          ;3
           getElementsPic(responsePicture);
         })();
         const getElementsPic = function(responsePicture) {
@@ -46,7 +49,7 @@ $(document).ready(function() {
 
       } else if (promptChoice === "3") {
         let story = new StoryPrompts;
-        const prompt = story.promptChoose();
+        const prompt = story.promptChoose();;3
         $(".promptResult").text(prompt);
         $(".promptResult").show();
         $(".writingInput").show();
