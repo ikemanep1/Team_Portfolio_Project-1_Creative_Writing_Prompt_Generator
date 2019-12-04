@@ -1,0 +1,23 @@
+#gif-prompt {
+  display: none;
+}
+#words-prompt {
+  display: none;
+}
+#words-prompt2 {
+  display: none;
+}
+.photo {
+  display: none;
+  width: 700px;
+  height: 700px;
+}
+.promptResult {
+  display: none;
+}
+.writingInput {
+  display: none;
+}
+.userPrompt {
+  display: none;
+}
