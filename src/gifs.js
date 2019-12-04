@@ -5,7 +5,7 @@ export default class Gif {
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
     } catch(error) {
-      // alert("There was a problem with your request")
+      //alert("There was a problem with your request")
       // $("#gifs").html("there was an error with your request:" + error.message);
       return false;
     }
