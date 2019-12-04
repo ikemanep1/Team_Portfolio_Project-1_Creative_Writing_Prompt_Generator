@@ -15,6 +15,7 @@ $(document).ready(function() {
     let millisecondTimer = (minuteTimer * 60000);
     let inputtedName = $("#name").val();
     let newWriter = new Writer (inputtedName, millisecondTimer);
+    newWriter.writerTimer();
     $(".intro").hide();
     $(".writing-space").show();
 
