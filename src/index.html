@@ -67,15 +67,15 @@
       <p class="userPrompt">Write about this: <span class="promptResult"></span></p>
       <img src="src" id="gif-prompt" alt="press submit to activate">
       <div id="words-prompt"> Words to be included:   </div>
-      <div id="words-prompt2"> Words to not be included: </div>
+      <div id="exclude-words"> Words to exclude: <span id="excludeArray"></span> </div>
       <img src="photo" alt="" class="photo">
       <form class="writingInput" action="index.html" method="post">
-        <input type="text" name="" value="">
+        <input type="text" id="draft">
         <button type="submit" name="button" id="writing-submit">See your writing!</button>
       </form>
     </div>
     <div class="review">
-      <p>this is where your writing will show up</p>
+      <p>this is where your writing will show up: <span id="submission"></span></p>
     </div>
   </div>
 </body>
