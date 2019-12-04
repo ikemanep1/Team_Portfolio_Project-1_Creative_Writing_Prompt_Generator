@@ -4,17 +4,10 @@ import "./styles.css";
 import Gif from "./gifs.js";
 import PictureAPI from "./pictures.js";
 import StoryPrompts from "./prompts.js";
-// import Words from "./random-words.js";
+import Words from "./random-words.js";
 $(document).ready(function() {
   $('#menuSubmit').click(function(e) {
     e.preventDefault();
-
-    let timer = parseInt($("#time-limit").val());
-    let timeLeft = (timer * 60000);
-
-    setTimeout(function(){
-
-    })
 
     let userChoice = $("input:radio[name=promptChoice]:checked").val();
     const apiDecider = function(promptChoice) {
@@ -31,6 +24,13 @@ $(document).ready(function() {
           $(".writingInput").show();
           $(".userPrompt").show();
         })();
+
+        var num = Math.floor((Math.random() * 15) + 1);
+        console.log(num);
+        const getElements = function(responseGif) {
+          $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
+        };
+
       } else if (promptChoice === "2") {
         (async () => {
           let pictureGrab = new PictureAPI();
@@ -43,7 +43,7 @@ $(document).ready(function() {
           $(".writingInput").show();
           $(".userPrompt").show();
         };
-        
+
       } else if (promptChoice === "3") {
         let story = new StoryPrompts;
         const prompt = story.promptChoose();
@@ -69,16 +69,7 @@ $(document).ready(function() {
           $("#words-prompt2").append(`${responseWords[10]}, ${responseWords[11]}, ${responseWords[12]}, ${responseWords[13]}, ${responseWords[14]}, ${responseWords[15]}, ${responseWords[16]}, ${responseWords[17]}, ${responseWords[18]}, ${responseWords[19]}`);
         };
       }
-      var num = Math.floor((Math.random() * 15) + 1);
-      const getElements = function(responseGif) {
-        $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
-      };
-      const getElementsPic = function(responsePicture) {
-        $(".photo").attr("src", `${responsePicture.url}`);
-      };
-
     };
     apiDecider(userChoice);
-
   });
 });
