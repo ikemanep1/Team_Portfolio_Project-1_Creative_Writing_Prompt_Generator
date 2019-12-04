@@ -19,13 +19,16 @@ $(document).ready(function() {
     e.preventDefault();
 
     let promptChoice = $("input:radio[name=promptChoice]:checked").val();
-    let minuteTimer = parseInt($("#time-limit").val());
-    let millisecondTimer = (minuteTimer * 60000);
+    let userModeChoice = $("input:radio[name=difficultyChoice]:checked").val();
+    let draft = $("#draft").val();
     let inputtedName = $("#name").val();
-    let newWriter = new Writer (inputtedName, millisecondTimer);
-    newWriter.writerTimer();
+    let newWriter = new Writer (inputtedName, userModeChoice, draft);
+    newWriter.writerMode();
+    let hardExcludeArray = newWriter.writerMode();
+
     $(".intro").hide();
     $(".writing-space").show();
+    $("#excludeArray").text(`${hardExcludeArray}`);
 
     const apiDecider = function(promptChoice) {
       console.warn(promptChoice);
@@ -70,7 +73,6 @@ $(document).ready(function() {
         $(".promptResult").show();
         $(".writingInput").show();
         $(".userPrompt").show();
-        console.log(prompt);
 
       } else if (promptChoice === "4") {
         (async () => {
@@ -78,7 +80,6 @@ $(document).ready(function() {
           const responseWords = await wordIndex.getWord();
           getElementsWords(responseWords);
           $("#words-prompt").show();
-          $("#words-prompt2").show();
           $(".writingInput").show();
           $(".userPrompt").show();
         })();
@@ -86,9 +87,24 @@ $(document).ready(function() {
         const getElementsWords = function(responseWords) {
           $("#words-prompt").append(`${responseWords[0]}, ${responseWords[1]}, ${responseWords[2]}, ${responseWords[3]}, ${responseWords[4]}, ${responseWords[5]}, ${responseWords[6]}, ${responseWords[7]}, ${responseWords[8]}, ${responseWords[9]}`);
         };
-        $("#words-prompt2").text("Words to avoid: like, well, kind of, stuff, things, basically, understatement, ironic, inside, really, actually, stupid, sort of, wow, lol, smh, tbd, lmao, IMO, IMHO, gregarious, codify, furthermore, and overrated.");
+
       }
     }
     apiDecider(promptChoice);
   });
+
+
+  $('#writing-submit').click(function(e) {
+    e.preventDefault();
+    let draft = $("#draft").val();
+    let inputtedName = $("#name").val();
+    let userModeChoice = $("input:radio[name=difficultyChoice]:checked").val();
+    console.log(draft);
+    $("#review").show();
+    $("#submission").text(`${draft}`);
+    let newWriter2 = new Writer(inputtedName, userModeChoice, draft)
+    console.log(`${newWriter2.draft}`);
+    newWriter2.draftChecker();
+  });
+
 });
