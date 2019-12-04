@@ -31,6 +31,8 @@ $(document).ready(function() {
           $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
         };
 
+        //comment
+
       } else if (promptChoice === "2") {
         (async () => {
           let pictureGrab = new PictureAPI();
