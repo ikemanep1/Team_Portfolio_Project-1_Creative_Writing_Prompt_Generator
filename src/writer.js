@@ -1,3 +1,4 @@
+import $ from 'jquery';
 export default class Writer {
   constructor(name, millisecondTimer) {
     this.name = name;
@@ -6,7 +7,8 @@ export default class Writer {
   }
   writerTimer() {
     setTimeout(function(){
-  alert("Hello friend! Maybe you should sign up for our newsletter!");
-}, this.timer);
+      $(".writing-space").hide();
+      $(".review").show();
+    }, this.timer);
   }
 }
