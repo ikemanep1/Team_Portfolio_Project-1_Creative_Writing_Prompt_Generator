@@ -5,11 +5,11 @@
   <title>Creative Writing </title>
 </head>
 <body>
-  <div class="intro">
-    <form id="form">
-      <label for="name">What's your name? Pseudonyms are a-okay.</label>
-      <input id="name" class="form-control">
-
+  <div class="container">
+    <div class="intro">
+      <form id="form">
+        <label for="name" required>What's your name? Pseudonyms are a-okay.</label>
+        <input type="text" id="name" class="form-control" required>
       <h5> Type of prompt </h5>
       <div class="radio">
         <label>
@@ -18,7 +18,7 @@
       </div>
       <div class="radio">
         <label>
-          <input type=radio name="promptChoice" value="2"> Photo
+          <input type=radio name="promptChoice" value="2" checked> Photo
         </label>
       </div>
       <div class="radio">
@@ -54,25 +54,28 @@
       </div>
       <h5> Word Limit </h5>
       <label for="word-limit">How many words do you want to write? Enter a number greater than 10.</label>
-      <input type="number" id="word-limit" class="form-control">
+      <input type="number" min="1" id="word-limit" class="form-control">
       <h5> Timer </h5>
       <label for="time-limit">How long (in minutes) do you want your writing session to last?</label>
-      <input type="number" id="time-limit" class="form-control">
+      <input type="number" min="1" max="60" value="1" id="time-limit" class="form-control">
       <br>
       <button type="submit" id="menuSubmit" name="button">Submit</button>
     </form>
     </div>
-
-  <div class="writing-space">
-    <p class="userPrompt">Write about this: <span class="promptResult"></span></p>
+    <div class="writing-space">
+      <p class="userPrompt">Write about this: <span class="promptResult"></span></p>
       <img src="src" id="gif-prompt" alt="press submit to activate">
       <div id="words-prompt"> Words to be included:   </div>
       <div id="words-prompt2"> Words to not be included: </div>
       <img src="photo" alt="" class="photo">
-    <form class="writingInput" action="index.html" method="post">
-      <input type="text" name="" value="">
-    </form>
+      <form class="writingInput" action="index.html" method="post">
+        <input type="text" name="" value="">
+        <button type="submit" name="button" id="writing-submit">See your writing!</button>
+      </form>
+    </div>
+    <div class="review">
+      <p>this is where your writing will show up</p>
+    </div>
   </div>
-
 </body>
 </html>
