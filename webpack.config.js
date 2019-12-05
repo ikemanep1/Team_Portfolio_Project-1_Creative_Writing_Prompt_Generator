@@ -1,3 +1,4 @@
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -31,15 +32,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
           'css-loader'
         ]
       },
       {
         test: /\.js$/,
         exclude: [
-            /node_modules/,
-            /spec/
-          ],
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       }
     ]
