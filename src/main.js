@@ -10,9 +10,11 @@ import img from "./letters.jpg";
 import img2 from "./unnamed.jpg";
 import img3 from "./images.jpg";
 $(document).ready(function() {
+
   $("#div").prepend(`<img id="theImg" src=${img} />`);
     $("#div2").prepend(`<img id="theImg2" src=${img2} />`);
     $("#div3").prepend(`<img id="theImg3" src=${img3} />`);
+
   $('#menuSubmit').click(function(e) {
     e.preventDefault();
 
@@ -43,7 +45,7 @@ $(document).ready(function() {
           $(".userPrompt").show();
         })();
 
-        var num = Math.floor((Math.random() * 15) + 1);
+        let num = Math.floor((Math.random() * 15) + 1);
         const getElements = function(responseGif) {
           $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
         };
@@ -76,15 +78,16 @@ $(document).ready(function() {
           getElementsWords(responseWords);
           $("#words-prompt").show();
           $(".writingInput").show();
-          $(".userPrompt").show();
+          // $(".userPrompt").show();
         })();
 
         const getElementsWords = function(responseWords) {
           $("#words-prompt").append(`${responseWords[0]}, ${responseWords[1]}, ${responseWords[2]}, ${responseWords[3]}, ${responseWords[4]}, ${responseWords[5]}, ${responseWords[6]}, ${responseWords[7]}, ${responseWords[8]}, ${responseWords[9]}`);
+          console.log(getElementsWords);
         };
 
       }
-    }
+    };
     apiDecider(promptChoice);
   });
 
@@ -94,10 +97,21 @@ $(document).ready(function() {
     let draft = $("#draft").val();
     let inputtedName = $("#name").val();
     let userModeChoice = $("input:radio[name=difficultyChoice]:checked").val();
-    $("#review").show();
+    $(".review").show();
     $("#submission").text(`${draft}`);
-    let newWriter2 = new Writer(inputtedName, userModeChoice, draft)
+    $(".writing-space").hide();
+    $('#author-name').text(`${inputtedName}`);
+    let newWriter2 = new Writer(inputtedName, userModeChoice, draft);
     newWriter2.draftChecker();
+    let draftCheckerResult = newWriter2.draftChecker();
+    if (draftCheckerResult === false && userModeChoice === "3") {
+      $("#failure").show();
+    } else if (userModeChoice === "3"){
+      $("#success").show();
+    } else {
+      $("#failure").hide();
+      $("#success").hide();
+    }
   });
 
 });
