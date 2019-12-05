@@ -30,3 +30,7 @@
   width: 300px;
   height: 300px;
 }
+.realIntro {
+  height: 10cm;
+  background-image: url("intro.jpg") !important;
+}
