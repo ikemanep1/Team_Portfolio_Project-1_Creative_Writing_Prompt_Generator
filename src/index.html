@@ -18,12 +18,12 @@
       <h5> Type of prompt </h5>
       <div class="radio">
         <label>
-          <input type=radio name="promptChoice" value="1"> Gif
+          <input type=radio name="promptChoice" value="1" checked> Gif
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type=radio name="promptChoice" value="2" checked> Photo
+          <input type=radio name="promptChoice" value="2"> Photo
         </label>
       </div>
       <div class="radio">
@@ -44,7 +44,7 @@
       <h5> Difficulty setting: how hard do you want your session to be? </h5>
       <div class="radio2">
         <label>
-          <input type=radio name="difficultyChoice" value="1"> Easy
+          <input type=radio name="difficultyChoice" value="1" checked> Easy
         </label>
       </div>
       <div class="radio2">
@@ -75,7 +75,7 @@
     <div class="review">
       <p>this is where your writing will show up, <span id="author-name"></span>: <span id="submission"></span></p>
       <p id="success">Congratulations! You didn't use any of the forbidden words! You are awarded 10 points!</p>
-      <p id="failure">Wow. You used <span id="tabooArray"></span> so you lost. No points for you. </p>
+      <p id="failure">Wow. You used one or more of the forbidden words. No points for you. </p>
     </div>
   </div>
 </body>
