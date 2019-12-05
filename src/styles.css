@@ -16,7 +16,7 @@
   display: none;
 }
 
- .photo {
+.photo {
   display: none;
   width: 700px;
   height: 700px;
@@ -51,48 +51,60 @@ body {
 }
 
 #theImg {
-  height: 250px;
-  width: 250px;
+  height: 500px;
+  width: 500px;
   float: left;
   margin-top: 1cm;
 }
 #theImg3 {
-  height: 250px;
-  width: 250px;
+  height: 500px;
+  width: 500px;
   float: left;
-  margin-top: 6cm;
+  margin-top: 10cm;
 }
 
 .proptType {
   width: 4cm;
-    float: right;
-      margin-top: 1cm;
+  float: right;
+  margin-top: 3cm;
+  margin-right: 3cm;
 
 }
 .level {
-   padding-top: 10cm;
+  padding-top: 17cm;
 
 }
 #wordlimit {
-    float: right;
-    width: 5cm;
-    margin-top: 6cm;
+  float: right;
+  width: 5cm;
+  margin-top: 6cm;
 }
 #theImg2 {
-  height: 250px;
-  width: 250px;
+  height: 500px;
+  width: 500px;
   float: right;
 
 }
 h5, h1 {
-  color: black;
+  color: #333333;
   font-weight: bold;
+  font-family: Livvic, sans-serif;
 }
 .header {
+  font-style: italic;
   color: black;
   font-size: 18px;
   text-align: left;
   display: block;
   padding-left: 1cm;
   padding-right: 1cm;
+}
+#draft {
+  width: 600px;
+  height: 300px;
+}
+#submit1 {
+  margin-top: 9cm;
+  margin-left: -2cm;
+
 }

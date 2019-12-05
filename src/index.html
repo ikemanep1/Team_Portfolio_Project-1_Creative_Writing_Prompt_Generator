@@ -5,75 +5,79 @@
   <title>Creative Writing </title>
 </head>
 <body>
-  <div class="realIntro">
-    <h1> Creative Writing </h1>
-    <span class="header"><p>One of the greatest ways to express the mind is through writing. Many folks will say that a picture is a thousand words. Through constant practice, exercises in imagination, and goal-directed persistence, one can make a word into a thousand pictures. Welcome to the Pinkathon prompt generator, where you can put your creative writing skills to the test.
-      The next time you're at a loss for what to write about, try using these creative writing ideas and prompts below.</p> </span>
-  </div>
-    <div class="container">
-      <div id="div">
+  <div class="intro">
+    <div class="realIntro">
+      <h1> Creative Writing </h1>
+      <span class="header"><p>One of the greatest ways to express the mind is through writing. Many folks will say that a picture is a thousand words. Through constant practice, exercises in imagination, and goal-directed persistence, one can make a word into a thousand pictures. Welcome to the Pinkathon prompt generator, where you can put your creative writing skills to the test.
+        The next time you're at a loss for what to write about, try using these creative writing ideas and prompts below.</p> </span>
       </div>
-      <div class="proptType">
-        <form id="form">
-          <label for="name" required><h5>Name/Pseudonym:<h5></label>
-            <input type="text" id="name" class="form-control">
-            <h5> Type of prompt </h5>
-            <div class="radio">
-              <label>
-                <input type=radio name="promptChoice" value="1"> Gif
-              </label>
+      <div class="container">
+        <div id="div">
+        </div>
+        <div class="proptType">
+          <form id="form">
+            <label for="name" required><h5>Name/Pseudonym:<h5></label>
+              <input type="text" id="name" class="form-control">
+              <h5> Type of prompt </h5>
+              <div class="radio">
+                <label>
+                  <input type=radio name="promptChoice" value="1" checked> Gif
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type=radio name="promptChoice" value="2"> Photo
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type=radio name="promptChoice" value="3"> Prompt
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type=radio name="promptChoice" value="4"> Word
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type=radio name="promptChoice" value="5"> Anything
+                </label>
+              </div>
             </div>
-            <div class="radio">
-              <label>
-                <input type=radio name="promptChoice" value="2" checked> Photo
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type=radio name="promptChoice" value="3"> Prompt
-              </label>
+            <div class="level">
+              <div id="div2">
+              </div> <br> <br> <br>
+              <h5> Difficulty setting: how hard do you want your session to be? </h5>
+              <div class="radio2">
+                <label>
+                  <input type=radio name="difficultyChoice" value="1" checked> Easy
+                </label>
+              </div>
+              <div class="radio2">
+                <label>
+                  <input type=radio name="difficultyChoice" value="2"> Intermediate
+                </label>
+              </div>
+              <div class="radio2">
+                <label>
+                  <input type=radio name="difficultyChoice" value="3"> Hard
+                </label>
+              </div> <br> <br>
+              <button type="click" id="menuSubmit" name="button">Submit</button>
             </div>
 
-            <div class="radio">
-              <label>
-                <input type=radio name="promptChoice" value="4"> Word
-              </label>
+            <div id="div3">
             </div>
-            <div class="radio">
-              <label>
-                <input type=radio name="promptChoice" value="5"> Anything
-              </label>
-            </div>
-          </div>
-          <div class="level">
-            <div id="div2">
-            </div>
-            <h5> Difficulty setting: how hard do you want your session to be? </h5>
-            <div class="radio2">
-              <label>
-                <input type=radio name="difficultyChoice" value="1"> Easy
-              </label>
-            </div>
-            <div class="radio2">
-              <label>
-                <input type=radio name="difficultyChoice" value="2"> Intermediate
-              </label>
-            </div>
-            <div class="radio2">
-              <label>
-                <input type=radio name="difficultyChoice" value="3"> Hard
-              </label>
-            </div>
-          </div>
-
-          <div id="div3">
-          </div>
-
-          <button type="click" id="menuSubmit" name="button">Submit</button>
-        </form>
+          </form>
+        </div>
+      </div>
+      <div class="container">
         <div class="writing-space">
           <p class="userPrompt">Write about this: <span class="promptResult"></span></p>
           <img src="src" id="gif-prompt" alt="press submit to activate">
+          <br>
+          <br>
           <div id="words-prompt"> You can write about anything, but use all of these words somewhere in your piece:  </div>
           <div id="exclude-words"> Words to exclude: <span id="excludeArray"></span> </div>
           <img src="photo" alt="" class="photo">
@@ -82,11 +86,16 @@
             <button type="submit" name="button" id="writing-submit">See your writing!</button>
           </form>
         </div>
+      </div>
+      <div class="container">
         <div class="review">
-          <p>this is where your writing will show up, <span id="author-name"></span>: <span id="submission"></span></p>
+          <p>Author: <span id="author-name"></span></p>
+          <p><span id="submission"></span></p>
           <p id="success">Congratulations! You didn't use any of the forbidden words! You are awarded 10 points!</p>
           <p id="failure">Wow. You used one or more of the forbidden words. No points for you. </p>
         </div>
       </div>
-  </body>
-  </html>
+    </div>
+  </div>
+</body>
+</html>
