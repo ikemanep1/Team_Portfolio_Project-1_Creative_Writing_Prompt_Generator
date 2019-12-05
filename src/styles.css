@@ -4,12 +4,16 @@
 #words-prompt {
   display: none;
 }
-#exclude-words{
+#exclude-words {
   display: none;
 }
 
 .writing-space, .review {
     display: none;
+}
+
+#success, #failure {
+  display: none;
 }
 
  .photo {
@@ -30,7 +34,7 @@
   width: 300px;
   height: 300px;
 }
-.realIntro {
+/* .realIntro {
   height: 10cm;
   background-image: url("intro.jpg") !important;
-}
+} */

@@ -35,13 +35,13 @@ module.exports = {
           'css-loader',
         ],
       },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader'
+      //   ]
+      // },
       {
         test: /\.js$/,
         exclude: [
