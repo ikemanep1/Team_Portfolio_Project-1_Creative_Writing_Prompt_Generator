@@ -6,15 +6,13 @@ import PictureAPI from "./pictures.js";
 import StoryPrompts from "./prompts.js";
 import Words from "./random-words.js";
 import Writer from "./writer.js";
+import img from "./letters.jpg";
+import img2 from "./unnamed.jpg";
+import img3 from "./images.jpg";
 $(document).ready(function() {
-  (async () => {
-    let domPictures = new PictureAPI();
-    const responseDom = await domPictures.pictureAPI();
-    getElementsDom(responseDom);
-  })();
-  const getElementsDom = function(responseDom) {
-    $(".pic").attr("src", `${responseDom.url}`);
-  };
+  $("#div").prepend(`<img id="theImg" src=${img} />`);
+    $("#div2").prepend(`<img id="theImg2" src=${img2} />`);
+    $("#div3").prepend(`<img id="theImg3" src=${img3} />`);
   $('#menuSubmit').click(function(e) {
     e.preventDefault();
 

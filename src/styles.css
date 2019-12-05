@@ -9,10 +9,10 @@
 }
 
 .writing-space, .review {
-    display: none;
+  display: none;
 }
 
- .photo {
+.photo {
   display: none;
   width: 700px;
   height: 700px;
@@ -31,6 +31,71 @@
   height: 300px;
 }
 .realIntro {
-  height: 10cm;
-  background-image: url("intro.jpg") !important;
+  height: 13cm;
+
+  background-image: url("intro1.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 5cm;
+}
+body {
+  background-color: #fff2fa !important;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  color: #6e6e6e
+}
+.container {
+  /* width: 300px ;
+  height: 300px ;
+  position: absolute;
+  left: 25% ;
+  top: 15% ;
+  transform: translate(-50%, -50%) ; */
+}
+
+#theImg {
+  height: 250px;
+  width: 250px;
+  float: left;
+  margin-top: 1cm;
+}
+#theImg3 {
+  height: 250px;
+  width: 250px;
+  float: left;
+  margin-top: 6cm;
+}
+
+.proptType {
+  width: 4cm;
+    float: right;
+      margin-top: 1cm;
+
+}
+.level {
+   padding-top: 10cm;
+
+}
+#wordlimit {
+    float: right;
+    width: 5cm;
+    margin-top: 6cm;
+}
+#theImg2 {
+  height: 250px;
+  width: 250px;
+  float: right;
+
+}
+h5, h1 {
+  color: black;
+  font-weight: bold;
+}
+.header {
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  display: block;
+  padding-left: 1cm;
+  padding-right: 1cm;
 }

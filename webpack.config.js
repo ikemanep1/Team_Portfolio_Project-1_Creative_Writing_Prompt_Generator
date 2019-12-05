@@ -36,11 +36,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'style-loader',
-          'css-loader'
-        ]
+          'file-loader',
+        ],
       },
       {
         test: /\.js$/,
@@ -49,7 +48,8 @@ module.exports = {
           /spec/
         ],
         loader: "eslint-loader"
-      }
+      },
+      
     ]
   }
 };
