@@ -30,13 +30,13 @@ export default class Writer {
   }
 
   draftChecker() {
-    let draftArray = [];
-    draftArray.push(this.draft.split(" "));
-    console.log(draftArray);
-    for (var i = 0; i < draftArray.length; i++) {
-      if (draftArray.includes(this.exclude[i])) {
-        console.log("hey");
+    if (this.mode === '3') {
+      for (var i = 0; i < this.exclude.length; i++) {
+        if (this.draft.includes(this.exclude[i])) {
+          alert("Jamie is awesome");
+        }
       }
     }
   }
+
 }

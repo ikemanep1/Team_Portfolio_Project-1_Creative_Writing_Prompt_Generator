@@ -31,13 +31,11 @@ $(document).ready(function() {
     $("#excludeArray").text(`${hardExcludeArray}`);
 
     const apiDecider = function(promptChoice) {
-      console.warn(promptChoice);
       if (promptChoice === "5") {
         let random = Math.floor((Math.random() * 3) + 1);
         apiDecider(random.toString());
       }
       if (promptChoice === "1") {
-        console.log("You chose 1");
         (async () => {
           let gifIndex = new Gif();
           const responseGif = await gifIndex.getGif();
@@ -48,7 +46,6 @@ $(document).ready(function() {
         })();
 
         var num = Math.floor((Math.random() * 15) + 1);
-        console.log(num);
         const getElements = function(responseGif) {
           $("#gif-prompt").attr("src", `${responseGif.data[num].images.original.url}`);
         };
@@ -99,11 +96,9 @@ $(document).ready(function() {
     let draft = $("#draft").val();
     let inputtedName = $("#name").val();
     let userModeChoice = $("input:radio[name=difficultyChoice]:checked").val();
-    console.log(draft);
     $("#review").show();
     $("#submission").text(`${draft}`);
     let newWriter2 = new Writer(inputtedName, userModeChoice, draft)
-    console.log(`${newWriter2.draft}`);
     newWriter2.draftChecker();
   });
 
