@@ -3,6 +3,7 @@ export default class Words {
     try {
       let responseWords = await fetch(`https://random-word-api.herokuapp.com/word?key=${process.env.API_KEY}&number=20`);
       let jsonifiedResponse = await responseWords.json();
+      console.log(jsonifiedResponse);
       return jsonifiedResponse;
     } catch(error) {
       alert("There was a problem with your request");
